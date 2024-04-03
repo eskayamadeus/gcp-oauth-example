@@ -6,7 +6,7 @@ Route::get('/auth-url', function () {
     $client = new \Google\Client();
     $client->setAuthConfig(base_path('client_secret.json'));
     $client->addScope('profile');
-    $client->setRedirectUri('https://redirectmeto.com/http://gcp-oauth-example.test');
+    $client->setRedirectUri('https://redirectmeto.com/http://gcp-oauth-example.test/auth-complete');
     $client->setAccessType('offline');
     $client->setIncludeGrantedScopes(true);
     // $client->setLoginHint('skelikem@gmail.com');
